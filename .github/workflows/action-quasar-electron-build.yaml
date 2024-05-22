@@ -8,6 +8,9 @@ on:
 
 jobs:
   build-electron:
+    permissions:
+      contents: write
+      
     runs-on: ${{ matrix.os-versions }}
 
     defaults:

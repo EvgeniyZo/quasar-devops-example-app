@@ -1,0 +1,15 @@
+name: Test app
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: |-
+          npm run test
